@@ -9,7 +9,7 @@ description = "把 Obsidian 数学笔记整理成 GitHub 上能正常渲染的 M
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
-authors = [{ name = "Silas-Peng" }]
+authors = [{ name = "Silas Zhang" }]
 keywords = ["obsidian", "markdown", "latex", "math", "notes", "cli"]
 classifiers = [
     "Programming Language :: Python :: 3",
