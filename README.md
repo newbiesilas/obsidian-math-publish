@@ -73,7 +73,7 @@ ompub 会把表格公式里的裸竖线成对换成 `\lvert` / `\rvert`。
 需要 Python 3.9 或更高版本，**零第三方依赖**。
 
 ```bash
-git clone https://github.com/Silas-Peng/obsidian-math-publish.git
+git clone https://github.com/newbiesilas/obsidian-math-publish.git
 cd obsidian-math-publish
 pip install -e .           # 装完就能用 ompub 命令
 ```
