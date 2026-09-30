@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ompub"
+version = "0.1.0"
+description = "把 Obsidian 数学笔记整理成 GitHub 上能正常渲染的 Markdown"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Silas-Peng" }]
+keywords = ["obsidian", "markdown", "latex", "math", "notes", "cli"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Text Processing :: Markup :: Markdown",
+]
+# 刻意保持零运行时依赖：frontmatter 只用到标量与单层列表，
+# 自己解析即可，装包就能跑。若后续需要嵌套结构，再引入 PyYAML。
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+ompub = "ompub.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
